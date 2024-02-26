@@ -1,0 +1,31 @@
+{
+	"name": "impl-fleet-management-api-node",
+	"version": "1.0.0",
+	"description": "Este proyecto es una implementación de Fleet Management Software API en NodeJS para los proyectos de devops.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "ts-node-dev ./src/index.ts",
+		"build": "rimraf ./build && prisma generate && tsc",
+		"start": "npm run build && node ./build/index.js",
+		"postinstall": "prisma generate"
+	},
+	"keywords": [],
+	"author": "Sergio Sinuco",
+	"license": "ISC",
+	"engines": {
+		"node": ">=20",
+		"npm": ">=9"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.13.0",
+		"express": "^4.19.2"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"prisma": "^5.17.0",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.4.5"
+	}
+}
